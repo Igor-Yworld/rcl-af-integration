@@ -1,3 +1,3 @@
 # Asgaros-Forum-to-WP-Recall
 # Integration plug-ins Asgaros Forum and WP-Recall
-Иконки и ссылки на профиль. Рейтинг постов и общий. Вывод подписи пользователя. Роли пользователей на сайте и форуме. Рейтинг постов и общий. Вывод подписи пользователя. Роли пользователей на сайте и форуме
+Icons and links to their profiles. Rating posts and General. The signature on the forum. User roles on the website and the forum. Rating posts and General. User roles on the website and the forum.
