@@ -101,17 +101,19 @@ if (getUserRoles($author_id)=='administrator') {
       }
     }
   }
-/* вывод местоположения(аддон), ссылки и иконки в кабинет */
+/* ссылки и иконки в кабинет */
 add_action('asgarosforum_after_post_author', 'my_function_asgaros_cabinet', 30, 1);
 
 function my_function_asgaros_cabinet($author_id) {
 	$user_info = get_userdata($author_id);
-	echo '<a href="'.rcl_format_url(get_author_posts_url($author_id),'chat').'" title="Профиль"><i class="fa fa-user"></i></a>
+	echo '<a href="'.get_author_posts_url($author_id).'" title="Профиль"><i class="fa fa-user"></i></a>
 	<a href="'.rcl_format_url(get_author_posts_url($author_id),'chat').'" title="Личное сообщение"><i class="fa fa-comment"></i></a>
 	<a href="'.rcl_format_url(get_author_posts_url($author_id),'recall').'" title="Отзывы"><i class="fa fa-trophy"></i></a>
 	<a href="'.rcl_format_url(get_author_posts_url($author_id),'groups').'" title="Группы"><i class="fa fa-group"></i></a>
 	<a href="'.rcl_format_url(get_author_posts_url($author_id),'publics').'" title="Публикации"><i class="fa fa-book"></i></a></span>';
+/* статус онлайн/офлайн */	
 	$action = rcl_get_time_user_action($author_id); echo '<div class="status-forum-online">'.rcl_get_miniaction($action).'</div>';
+/* локация */	
 	if(function_exists('ucc_get_value'))
 	{
 		echo '<div class="ucc-cou-siti">'.ucc_get_value($author_id).'</div>';
