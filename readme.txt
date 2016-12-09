@@ -5,17 +5,17 @@ Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Простая интеграция плагинов Asgaros Forum и WP-Recal
+Easy integration plugins Asgaros Forum and WP-Recall
 
 == Description ==
-Добавляет иконки на профиль пользователя, личные сообщения и другие вкладки профиля. Выводит роль пользователя на сайте и форуме, рейтинг общий, возможность голосовать за сообщение с выводом рейтинга. Подпись на форуме и другие функции.
+Adds links, icons, user profile, personal messages and the other tabs in the profile. Shows the user role of the forum and website, rating shared, the opportunity to vote for the post. The signature on the forum and other functions.
 
 = Installation =
-Устанавливается как стандартное дополнение WP-Recall. После активации перейти в настройки WP-Recall и активировать рейтинг форума. Готово.
+Installs as a standard attachment WP-Recall. After activation go to settings WP-Recall and activate the rating forum. Ready.
 
 == Frequently Asked Questions ==
-= Нет возможности проголосовать за сообщение =
-Включите и настройте рейтинг форума в настройках WP-Recall.
+= There is no possibility to vote for the message =
+Enable and set the rating of the forum in the settings WP-Recall.
 
 == Changelog ==
 = 1.0.5 =
