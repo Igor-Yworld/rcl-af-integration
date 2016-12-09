@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Asgaros Forum to WP-Recall\n"
-"POT-Creation-Date: 2016-12-09 09:44+0300\n"
-"PO-Revision-Date: 2016-12-09 09:51+0300\n"
+"POT-Creation-Date: 2016-12-09 23:58+0300\n"
+"PO-Revision-Date: 2016-12-10 00:12+0300\n"
 "Last-Translator: \n"
 "Language-Team: Yworld <yworld@yandex.ru>\n"
 "Language: ru_RU\n"
@@ -16,47 +16,225 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e\n"
 "X-Poedit-SearchPath-0: index.php\n"
+"X-Poedit-SearchPath-1: settings.php\n"
 
-#: index.php:32
+#: index.php:39
 msgid "Rating"
 msgstr "Рейтинг"
 
-#: index.php:79
-msgid "Admin"
-msgstr "Админ"
-
-#: index.php:82
-msgid "Moderator"
-msgstr "Модератор"
-
-#: index.php:85
-msgid "Contributor"
-msgstr "Участник"
-
-#: index.php:88
-msgid "Author"
-msgstr "Автор"
-
-#: index.php:91
-msgid "Editor"
-msgstr "Редактор"
-
-#: index.php:101
+#: index.php:114
 msgid "Profile"
 msgstr "Профиль"
 
-#: index.php:102
+#: index.php:115
 msgid "Private message"
 msgstr "Личное сообщение"
 
-#: index.php:103
+#: index.php:116
 msgid "Reviews"
 msgstr "Отзывы"
 
-#: index.php:104
+#: index.php:117
 msgid "Groups"
 msgstr "Группы"
 
-#: index.php:105
+#: index.php:118
 msgid "Publications"
 msgstr "Публикации"
+
+#: settings.php:12
+msgid "Forum settings"
+msgstr "Настройки форума"
+
+#: settings.php:15
+msgid "User signature"
+msgstr "Подпись пользователей"
+
+#: settings.php:17
+msgid "Install MetaKey additional signature field"
+msgstr "Вписать MetaKey доп. поля подписи"
+
+#: settings.php:17
+msgid ""
+"Creating an additional text field in your profile and set it MetaKey. Not "
+"necessary."
+msgstr ""
+"Создайте дополнительное текстовоое поля в вашем профиле и впишите его "
+"MetaKey. Не обязательно."
+
+#: settings.php:17
+msgid "Example: podpis_na_forume"
+msgstr "Пример: podpis_na_forume"
+
+#: settings.php:19
+msgid "User roles"
+msgstr "Роли пользователей"
+
+#: settings.php:21
+msgid "Forum administrator"
+msgstr "Администратор форума"
+
+#: settings.php:21
+msgid "Display name of the administrator role"
+msgstr "Отображаемое название роли администратора."
+
+#: settings.php:21
+msgid "Example: Admin"
+msgstr "Пример: Админ"
+
+#: settings.php:23
+msgid "Forum moderftor"
+msgstr "Модератор форума"
+
+#: settings.php:23
+msgid "Display name of the moderftor role"
+msgstr "Отображаемое название роли модератора."
+
+#: settings.php:23
+msgid "Example: Moderftor"
+msgstr "Пример: Модератор"
+
+#: settings.php:25
+msgid "Forum contributor"
+msgstr "Участник форума"
+
+#: settings.php:25
+msgid "Display name of the contributor role"
+msgstr "Отображаемое название роли участника."
+
+#: settings.php:25 settings.php:43
+msgid "Example: Contributor"
+msgstr "Пример: Участник"
+
+#: settings.php:27
+msgid "Author(The role of the site)"
+msgstr "Автор(роль сайта)"
+
+#: settings.php:27
+msgid "Display name of the author role"
+msgstr "Отображаемое название роли автора"
+
+#: settings.php:27
+msgid "Example: Author"
+msgstr "Пример: Автор"
+
+#: settings.php:29
+msgid "Editor(The role of the site)"
+msgstr "Редактор(роль сайта)"
+
+#: settings.php:29
+msgid "Display name of the editor role"
+msgstr "Отображаемое название роли редактора"
+
+#: settings.php:29
+msgid "Example: Editor"
+msgstr "Пример: Редактор"
+
+#: settings.php:31
+msgid "The icon next to the role"
+msgstr "Иконка рядом с ролью"
+
+#: settings.php:37
+msgid "Turn off"
+msgstr "Не показывать"
+
+#: settings.php:38
+msgid "Enable"
+msgstr "Показать"
+
+#: settings.php:41
+msgid "Ranks from the number of messages"
+msgstr "Звания от количества сообщений"
+
+#: settings.php:43
+msgid "The first rank"
+msgstr "Первое звание"
+
+#: settings.php:43 settings.php:46 settings.php:49 settings.php:52
+#: settings.php:55 settings.php:58
+msgid "Do not fill the field if you do not use the rank."
+msgstr "Не заполняйте поля если не используете звания."
+
+#: settings.php:44 settings.php:47 settings.php:50 settings.php:53
+#: settings.php:56 settings.php:59
+msgid "Number of posts"
+msgstr "Количество сообщений"
+
+#: settings.php:44
+msgid "Example: 10"
+msgstr "Пример: 10"
+
+#: settings.php:46
+msgid "Second rank"
+msgstr "Второе звание"
+
+#: settings.php:46
+msgid "Example: Activist"
+msgstr "Пример: Активист"
+
+#: settings.php:47
+msgid "Example: 50"
+msgstr "Пример: 50"
+
+#: settings.php:49
+msgid "A third rank"
+msgstr "Третье звание"
+
+#: settings.php:49
+msgid "Example: lodger"
+msgstr "Пример: Постоялец"
+
+#: settings.php:50
+msgid "Example: 100"
+msgstr "Пример: 100"
+
+#: settings.php:52
+msgid "The fourth rank"
+msgstr "Четвертое звание"
+
+#: settings.php:52
+msgid "Example: Frequenter"
+msgstr "Пример: Завсегдатай"
+
+#: settings.php:53
+msgid "Example: 500"
+msgstr "Пример: 500"
+
+#: settings.php:55
+msgid "The fifth rank"
+msgstr "Пятое звание"
+
+#: settings.php:55
+msgid "Example: The local"
+msgstr "Пример: Здешний"
+
+#: settings.php:56
+msgid "Example: 800"
+msgstr "Пример: 800"
+
+#: settings.php:58
+msgid "The sixth rank"
+msgstr "Шестое звание"
+
+#: settings.php:58
+msgid "Example: VIP"
+msgstr "Пример: VIP"
+
+#: settings.php:59
+msgid "Example: 1000"
+msgstr "Пример: 1000"
+
+#~ msgid "Admin"
+#~ msgstr "Админ"
+
+#~ msgid "Moderator"
+#~ msgstr "Модератор"
+
+#~ msgid "Contributor"
+#~ msgstr "Участник"
+
+#~ msgid "Author"
+#~ msgstr "Автор"
+
+#~ msgid "Editor"
+#~ msgstr "Редактор"
