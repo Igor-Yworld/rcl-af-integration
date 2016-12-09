@@ -1,7 +1,7 @@
 === Asgaros Forum to WP-Recall ===
 Contributors: Igor-Yworld
 Requires at least: 4.7
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
