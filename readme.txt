@@ -1,7 +1,7 @@
 === Asgaros Forum to WP-Recall ===
 Contributors: Igor-Yworld
 Requires at least: 4.7
-Stable tag: 1.0.5
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,10 @@ Installs as a standard attachment WP-Recall. After activation go to settings WP-
 Enable and set the rating of the forum in the settings WP-Recall.
 
 == Changelog ==
+= 2.0.0 =
+* Добавлены настройки в административной части WP-Recall
+* Добавлены звания основывающиеся на количестве сообщений, тест.
+* Общая оптимизация кода
 = 1.0.5 =
 * Добавлены языковые файлы
 * Исправлены мелкие недочеты
