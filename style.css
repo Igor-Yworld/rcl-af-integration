@@ -1,4 +1,7 @@
 /* rcl-af-integration */
+#af-wrapper .icon-status-indent{
+padding-left:5px;
+}
 #af-wrapper .icon-status-admin{
 font-size: 13px;
 font-weight:bold;
