@@ -1,5 +1,5 @@
 Name: Asgaros Forum + WP-Recall;
-Version: 1.0.4;
+Version: 1.0.5;
 Support Core: 15.0.0;
 Description: Значки и ссылки в панель WP-Recall, рейтинг поста и общий, местоположение(дополнение к WP-Recall-Сountry and city in profile), подпись на форуме(доп. поле). Перед обновлением обязательно прочитайте о внесенных изменениях на странице поддержки плагина!;
 Author: Игорь Гребенкин;
