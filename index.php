@@ -72,7 +72,7 @@ else
 else 
 	if(getUserRoles($author_id)=='editor') {echo '<div class="icon-status-editor">Редактор&nbsp;<i class="fa fa-info-circle"></i></div>';};
 } */
-//Модератор, администратор, остальные участники форума
+//Модератор, администратор, остальные участники форума, зависит от званий на сайте
 add_action('asgarosforum_after_post_author', 'my_asgarosforum_after_post_administration', 10, 2);
 function getUserRoles($id) { 
     $user = new WP_User((int)$id); 
