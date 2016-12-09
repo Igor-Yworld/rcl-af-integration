@@ -121,7 +121,7 @@ function my_function_asgaros_cabinet($author_id) {
 
 }
 
-/* подпись на форуме при сипользовании произвольного поля в профиле */
+/* подпись на форуме при использовании произвольного поля в профиле */
 add_action('asgarosforum_after_post_message', 'my_function_signature', 10, 1);
 
 function my_function_signature($author_id) {
