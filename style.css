@@ -1,0 +1,60 @@
+/* Wp-Recall */
+#af-wrapper .icon-status-admin{
+font-size: 13px;
+font-weight:bold;
+color: #F43D2A;
+}
+#af-wrapper .icon-status-moderator {
+	font-size: 13px;
+	font-weight:bold;
+    color: #469AC6;    
+}
+#af-wrapper .icon-status-contributor{
+font-size: 13px;
+font-style: normal;
+color: #E3BB24;
+}
+#af-wrapper .icon-status-author{
+font-size: 13px;
+font-style: normal;
+color: #099922;
+}
+#af-wrapper .icon-status-editor{
+font-size: 13px;
+font-style: normal;
+color: #099922;
+}
+#af-wrapper .status-forum-online {
+    background-color: #bfffbd;
+    margin-bottom: 7px;
+    padding: 2px 15px;
+    color: #008000;
+}
+#af-wrapper .ucc-cou-siti{
+color: #469AC6;
+font-size: 8px !important;
+padding: 0px 0px 5px;
+}
+#af-wrapper .signature{
+    display: block; 
+    font-size: 13px;
+    font-weight: bold;
+    color: #469AC6;
+    text-align: left;
+    position: absolute;
+    padding: 5px 10px;
+    bottom: 0;
+    left: 0;
+}
+#af-wrapper  .rating-post{
+    display: block; 
+    width: 100%;
+    color: #A85400;
+    padding: 5px 10px;
+    bottom: 0;
+    left: 0;
+}
+#af-wrapper .rating-header{
+margin-bottom: 20px;
+border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
