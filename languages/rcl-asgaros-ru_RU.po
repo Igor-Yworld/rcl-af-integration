@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Asgaros Forum to WP-Recall\n"
-"POT-Creation-Date: 2016-12-12 18:16+0300\n"
-"PO-Revision-Date: 2016-12-12 18:19+0300\n"
+"POT-Creation-Date: 2016-12-12 18:53+0300\n"
+"PO-Revision-Date: 2016-12-12 18:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: Yworld <yworld@yandex.ru>\n"
 "Language: ru_RU\n"
@@ -72,7 +72,7 @@ msgstr "Показать"
 msgid "Install MetaKey additional signature field"
 msgstr "Вписать MetaKey доп. поля подписи"
 
-#: settings.php:32 settings.php:141 settings.php:142
+#: settings.php:32 settings.php:142
 msgid ""
 "Creating an additional text field in your profile and set it MetaKey. Not "
 "necessary."
@@ -263,8 +263,12 @@ msgid "Name"
 msgstr "Имя"
 
 #: settings.php:141
+msgid "Enter the the field name. Not necessary."
+msgstr "Введите название дополнительного поля"
+
+#: settings.php:141
 msgid "Example: android"
-msgstr "Пример: android"
+msgstr "Пример: Android"
 
 #: settings.php:142
 msgid "Install MetaKey additional field"
