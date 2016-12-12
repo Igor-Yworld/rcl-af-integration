@@ -107,11 +107,7 @@ if (getUserRoles($author_id)=='administrator') {
          }
       }
     }
-    /* дата регитсрации */
-$user_info = get_userdata($author_id);
-$registered = $user_info->user_registered;
-echo '<div class="data-registered">Регистрация:<br/>'.date("j.n.Y", strtotime($registered)).'</div>';
-  }
+ }
 /* ссылки и иконки в кабинет */
 add_action('asgarosforum_after_post_author', 'my_function_asgaros_cabinet', 30, 1);
 function my_function_asgaros_cabinet($author_id) {
@@ -124,18 +120,17 @@ global  $rcl_options;
 	<a href="'.rcl_format_url(get_author_posts_url($author_id),'publics').'" title="'.__('Publications','rcl-asgaros').'"><i class="'.$rcl_options['icon_enable_publics'].'"></i></a></span>';
 /* статус онлайн/офлайн */	
 	$action = rcl_get_time_user_action($author_id); echo '<div class="status-forum-online">'.rcl_get_miniaction($action).'</div>';
+/* дата регитсрации */
+$user_info = get_userdata($author_id);
+$registered = $user_info->user_registered;
+echo '<div class="'.$rcl_options['information_enable_recall'].'"><details class="details">
+    <summary>'.__('Information','rcl-asgaros').'</summary><div class="data-registered">'.__('Registration','rcl-asgaros').':<br/>'.date("j.n.Y", strtotime($registered)).'</div>';
+
 /* локация */	
 	if(function_exists('ucc_get_value'))
 	{
 		echo '<div class="ucc-cou-siti">'.ucc_get_value($author_id).'</div>';
 		}
-}
-/* подпись на форуме при использовании произвольного поля в профиле */
-add_action('asgarosforum_after_post_message', 'my_function_signature', 10, 1);
-function my_function_signature($author_id) {
-global  $rcl_options;
-echo '<div class="'.$rcl_options['afrcl_signature_enable'].'">'.get_user_meta($author_id,$rcl_options['signature'],1).'</div>';
-	
 }
 /* Дополнительное поле 1 в зоне аватара*/
 add_action('asgarosforum_after_post_author', 'my_function_afrcl_field_name_1', 40, 1);
@@ -144,10 +139,16 @@ global  $rcl_options;
 echo '<div class="'.$rcl_options['afrcl_field_name_enable'].'">'.$rcl_options['afrcl_field_name_1'].'</div>';
 	
 }
-
 add_action('asgarosforum_after_post_author', 'my_function_afrcl_field_1', 40, 1);
 function my_function_afrcl_field_1($author_id) {
 global  $rcl_options;
-echo '<div class="'.$rcl_options['afrcl_field_name_enable'].'">'.get_user_meta($author_id,$rcl_options['afrcl_field_1'],1).'</div>';
+echo '<div class="'.$rcl_options['afrcl_field_name_enable'].'">'.get_user_meta($author_id,$rcl_options['afrcl_field_1'],1).'</div></details></div>';
 	
 }
+/* подпись на форуме при использовании произвольного поля в профиле */
+add_action('asgarosforum_after_post_message', 'my_function_signature', 10, 1);
+function my_function_signature($author_id) {
+global  $rcl_options;
+echo '<div class="'.$rcl_options['afrcl_signature_enable'].'">'.get_user_meta($author_id,$rcl_options['signature'],1).'</div>';
+	
+} 
