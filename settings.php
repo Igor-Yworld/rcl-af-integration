@@ -18,7 +18,7 @@ function options_rcl_asgaros($options){
                  //   'default'=>5,
                     'parent'=>true,
                     'options'=>array(
-                        'element-hide'=>(__('Turn off','rcl-asgaros')),
+                        'signature-hide'=>(__('Turn off','rcl-asgaros')),
                         'signature'=>(__('Enable','rcl-asgaros')),
                         )
                 )),
@@ -30,7 +30,7 @@ $opt->child(
                     ),
                     array(
 					$opt->option('text',array('name'=>'signature','label'=>__('Install MetaKey additional signature field','rcl-asgaros'),'help'=>__('Creating an additional text field in your profile and set it MetaKey. Not necessary.','rcl-asgaros'),'notice'=>__('Example: podpis_na_forume','rcl-asgaros'))),
-                    )
+					)
                 ),
                
 				$opt->title(__('User roles','rcl-asgaros')),
@@ -75,6 +75,18 @@ $opt->child(
                 $opt->option('text',array('name'=>'rank6_forum','label'=>__('The sixth rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: VIP','rcl-asgaros'))),
                 $opt->option('number',array('name'=>'amount6_posts','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 1000','rcl-asgaros'))),
                 
+                $opt->title(__('Information block','rcl-asgaros')),
+ $opt->option('select',array(
+                    'name'=>'information_enable_recall',
+                    'label'=>(__('Information block','rcl-asgaros')),
+                 //   'default'=>5,
+                    'parent'=>true,
+                    'options'=>array(
+                        'info-hide'=>(__('Turn off','rcl-asgaros')),
+                        'info-enable'=>(__('Enable','rcl-asgaros')),
+                        )
+                )),
+                
                 $opt->title(__('Profile Icons','rcl-asgaros')),
  $opt->option('select',array(
                     'name'=>'icon_enable_recall',
@@ -82,7 +94,7 @@ $opt->child(
                  //   'default'=>5,
                     'parent'=>true,
                     'options'=>array(
-                        ''=>(__('Turn off','rcl-asgaros')),
+                        'icon-hide'=>(__('Turn off','rcl-asgaros')),
                         'fa fa-trophy'=>(__('Enable','rcl-asgaros')),
                         )
                 )),
@@ -93,7 +105,7 @@ $opt->child(
                  //   'default'=>5,
                     'parent'=>true,
                     'options'=>array(
-                        ''=>(__('Turn off','rcl-asgaros')),
+                        'icon-hide'=>(__('Turn off','rcl-asgaros')),
                         'fa fa-group'=>(__('Enable','rcl-asgaros')),
                         )
                 )),
@@ -104,7 +116,7 @@ $opt->child(
                  //   'default'=>5,
                     'parent'=>true,
                     'options'=>array(
-                        ''=>(__('Turn off','rcl-asgaros')),
+                        'icon-hide'=>(__('Turn off','rcl-asgaros')),
                         'fa fa-book'=>(__('Enable','rcl-asgaros')),
                         )
                 )),
