@@ -61,3 +61,6 @@ padding: 0px 0px 5px;
 margin-bottom: 20px;
 border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
+#af-wrapper .element-hide{
+display: none;
+}
