@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Asgaros Forum to WP-Recall\n"
 "POT-Creation-Date: 2016-12-12 18:53+0300\n"
-"PO-Revision-Date: 2016-12-12 18:54+0300\n"
+"PO-Revision-Date: 2016-12-12 19:19+0300\n"
 "Last-Translator: \n"
 "Language-Team: Yworld <yworld@yandex.ru>\n"
 "Language: ru_RU\n"
@@ -264,7 +264,7 @@ msgstr "Имя"
 
 #: settings.php:141
 msgid "Enter the the field name. Not necessary."
-msgstr "Введите название дополнительного поля"
+msgstr "Введите название дополнительного поля. Не обязательно"
 
 #: settings.php:141
 msgid "Example: android"
