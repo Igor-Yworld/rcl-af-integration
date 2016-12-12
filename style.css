@@ -36,7 +36,12 @@ color: #099922;
 #af-wrapper .ucc-cou-siti{
 color: #469AC6;
 font-size: 8px !important;
-padding: 0px 0px 5px;
+/*padding: 0px 0px 5px;*/
+}
+#af-wrapper .data-registered{
+color: #469AC6;
+font-size: smaller;
+padding: 0px 0px 2px;
 }
 #af-wrapper .signature{
     display: block; 
@@ -63,4 +68,36 @@ border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
 #af-wrapper .element-hide{
 display: none;
+}
+#af-wrapper .signature-hide{
+display: none;
+}
+#af-wrapper .icon-hide{
+display: none;
+}
+#af-wrapper .info-hide{
+display: none;
+}
+#af-wrapper .afrcl-field{
+    font-size: smaller;
+    font-weight: bold;
+    color: #469AC6;
+}
+/* спойлер */
+#af-wrapper .details summary { /* строки-заголовок для клика */
+  position: relative;
+  font-size: smaller;
+  background: #2d89cc;
+  padding: 2px 10px;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+#af-wrapper .details summary::-webkit-details-marker { /* треугольник */
+   position: absolute;
+   right: 1px;
+   top: 35%;
+}
+#af-wrapper .details[open] summary { /* цвет строки-заголовка в открытом виде */
+  background: #c0c0c0;
 }
