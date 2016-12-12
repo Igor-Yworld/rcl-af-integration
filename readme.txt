@@ -18,6 +18,11 @@ Installs as a standard attachment WP-Recall. After activation go to settings WP-
 Enable and set the rating of the forum in the settings WP-Recall.
 
 == Changelog ==
+* Небольшие изменения в выводе инофрмации
+* Добавлен вывод даты регистрации
+* Включение/выключение иконок в профиль
+* Дополнительное поле в зоне автора
+* Изменение стелей
 = 2.0.0 =
 * Добавлены настройки в административной части WP-Recall
 * Добавлены звания основывающиеся на количестве сообщений, тест.
