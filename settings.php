@@ -138,7 +138,7 @@ $opt->child(
                     'value'=>'afrcl-field'//значение опции родителя
                     ),
                     array(
-					$opt->option('text',array('name'=>'afrcl_field_name_1','label'=>__('Name','rcl-asgaros'),'help'=>__('Creating an additional text field in your profile and set it MetaKey. Not necessary.','rcl-asgaros'),'notice'=>__('Example: android','rcl-asgaros'))),
+					$opt->option('text',array('name'=>'afrcl_field_name_1','label'=>__('Name','rcl-asgaros'),'help'=>__('Enter the the field name. Not necessary.','rcl-asgaros'),'notice'=>__('Example: android','rcl-asgaros'))),
                     $opt->option('text',array('name'=>'afrcl_field_1','label'=>__('Install MetaKey additional field','rcl-asgaros'),'help'=>__('Creating an additional text field in your profile and set it MetaKey. Not necessary.','rcl-asgaros'),'notice'=>__('Example: android_version','rcl-asgaros'))),
                     )
                 )           
