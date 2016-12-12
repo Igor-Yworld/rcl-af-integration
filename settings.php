@@ -13,8 +13,25 @@ function options_rcl_asgaros($options){
         $opt->option_block(
             array(
                 $opt->title(__('User signature','rcl-asgaros')),
- 
-                $opt->option('text',array('name'=>'signature','label'=>__('Install MetaKey additional signature field','rcl-asgaros'),'help'=>__('Creating an additional text field in your profile and set it MetaKey. Not necessary.','rcl-asgaros'),'notice'=>__('Example: podpis_na_forume','rcl-asgaros'))),
+ $opt->option('select',array(
+                    'name'=>'afrcl_signature_enable',
+                 //   'default'=>5,
+                    'parent'=>true,
+                    'options'=>array(
+                        'element-hide'=>(__('Turn off','rcl-asgaros')),
+                        'signature'=>(__('Enable','rcl-asgaros')),
+                        )
+                )),
+
+$opt->child(
+            array(
+                    'name'=>'afrcl_signature_enable',
+                    'value'=>'signature'//значение опции родителя
+                    ),
+                    array(
+					$opt->option('text',array('name'=>'signature','label'=>__('Install MetaKey additional signature field','rcl-asgaros'),'help'=>__('Creating an additional text field in your profile and set it MetaKey. Not necessary.','rcl-asgaros'),'notice'=>__('Example: podpis_na_forume','rcl-asgaros'))),
+                    )
+                ),
                
 				$opt->title(__('User roles','rcl-asgaros')),
  
@@ -57,7 +74,62 @@ function options_rcl_asgaros($options){
                                 
                 $opt->option('text',array('name'=>'rank6_forum','label'=>__('The sixth rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: VIP','rcl-asgaros'))),
                 $opt->option('number',array('name'=>'amount6_posts','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 1000','rcl-asgaros'))),
-                            
+                
+                $opt->title(__('Profile Icons','rcl-asgaros')),
+ $opt->option('select',array(
+                    'name'=>'icon_enable_recall',
+                    'label'=>(__('Enable reviews','rcl-asgaros')),
+                 //   'default'=>5,
+                    'parent'=>true,
+                    'options'=>array(
+                        ''=>(__('Turn off','rcl-asgaros')),
+                        'fa fa-trophy'=>(__('Enable','rcl-asgaros')),
+                        )
+                )),
+                
+ $opt->option('select',array(
+                    'name'=>'icon_enable_groups',
+                    'label'=>(__('Enable groups','rcl-asgaros')),
+                 //   'default'=>5,
+                    'parent'=>true,
+                    'options'=>array(
+                        ''=>(__('Turn off','rcl-asgaros')),
+                        'fa fa-group'=>(__('Enable','rcl-asgaros')),
+                        )
+                )),
+                
+ $opt->option('select',array(
+                    'name'=>'icon_enable_publics',
+                    'label'=>(__('Enable publications','rcl-asgaros')),
+                 //   'default'=>5,
+                    'parent'=>true,
+                    'options'=>array(
+                        ''=>(__('Turn off','rcl-asgaros')),
+                        'fa fa-book'=>(__('Enable','rcl-asgaros')),
+                        )
+                )),
+
+                $opt->title(__('Additional field','rcl-asgaros')),
+ $opt->option('select',array(
+                    'name'=>'afrcl_field_name_enable',
+                 //   'default'=>5,
+                    'parent'=>true,
+                    'options'=>array(
+                        'element-hide'=>(__('Turn off','rcl-asgaros')),
+                        'afrcl-field'=>(__('Enable','rcl-asgaros')),
+                        )
+                )),
+
+$opt->child(
+            array(
+                    'name'=>'afrcl_field_name_enable',
+                    'value'=>'afrcl-field'//значение опции родителя
+                    ),
+                    array(
+					$opt->option('text',array('name'=>'afrcl_field_name_1','label'=>__('Name','rcl-asgaros'),'help'=>__('Creating an additional text field in your profile and set it MetaKey. Not necessary.','rcl-asgaros'),'notice'=>__('Example: android','rcl-asgaros'))),
+                    $opt->option('text',array('name'=>'afrcl_field_1','label'=>__('Install MetaKey additional field','rcl-asgaros'),'help'=>__('Creating an additional text field in your profile and set it MetaKey. Not necessary.','rcl-asgaros'),'notice'=>__('Example: android_version','rcl-asgaros'))),
+                    )
+                )           
             )
         )
     ); 
