@@ -34,17 +34,29 @@ $opt->child(
                 ),
                
 				$opt->title(__('User roles','rcl-asgaros')),
- 
-                $opt->option('text',array('name'=>'admin_forum','label'=>__('Forum administrator','rcl-asgaros'),'help'=>__('Display name of the administrator role','rcl-asgaros'),'notice'=>__('Example: Admin','rcl-asgaros'))),
-                
-                $opt->option('text',array('name'=>'moderator_forum','label'=>__('Forum moderftor','rcl-asgaros'),'help'=>__('Display name of the moderftor role','rcl-asgaros'),'notice'=>__('Example: Moderftor','rcl-asgaros'))),
-                
-                $opt->option('text',array('name'=>'contributor_forum','label'=>__('Forum contributor','rcl-asgaros'),'help'=>__('Display name of the contributor role','rcl-asgaros'),'notice'=>__('Example: Contributor','rcl-asgaros'))),
-                
-                $opt->option('text',array('name'=>'author_forum','label'=>__('Author(The role of the site)','rcl-asgaros'),'help'=>__('Display name of the author role','rcl-asgaros'),'notice'=>__('Example: Author','rcl-asgaros'))),
-                
+				$opt->option('select',array(
+                    'name'=>'afrcl_roles_enable',
+                 //   'default'=>5,
+                    'parent'=>true,
+                    'options'=>array(
+                        '1'=>(__('Turn off','rcl-asgaros')),
+                        '2'=>(__('Enable','rcl-asgaros')),
+                        )
+                )),
+
+$opt->child(
+            array(
+                    'name'=>'afrcl_roles_enable',
+                    'value'=>'2'//значение опции родителя
+                    ),
+                array(
+				$opt->option('text',array('name'=>'admin_forum','label'=>__('Forum administrator','rcl-asgaros'),'help'=>__('Display name of the administrator role','rcl-asgaros'),'notice'=>__('Example: Admin','rcl-asgaros'))),                
+                $opt->option('text',array('name'=>'moderator_forum','label'=>__('Forum moderftor','rcl-asgaros'),'help'=>__('Display name of the moderftor role','rcl-asgaros'),'notice'=>__('Example: Moderftor','rcl-asgaros'))),                
+                $opt->option('text',array('name'=>'contributor_forum','label'=>__('Forum contributor','rcl-asgaros'),'help'=>__('Display name of the contributor role','rcl-asgaros'),'notice'=>__('Example: Contributor','rcl-asgaros'))),                
+                $opt->option('text',array('name'=>'author_forum','label'=>__('Author(The role of the site)','rcl-asgaros'),'help'=>__('Display name of the author role','rcl-asgaros'),'notice'=>__('Example: Author','rcl-asgaros'))),                
                 $opt->option('text',array('name'=>'editor_forum','label'=>__('Editor(The role of the site)','rcl-asgaros'),'help'=>__('Display name of the editor role','rcl-asgaros'),'notice'=>__('Example: Editor','rcl-asgaros'))),
-                
+                    )
+                ),
                 $opt->label(__('The icon next to the role','rcl-asgaros')),
                 $opt->option('select',array(
                     'name'=>'icon_role',
@@ -56,7 +68,21 @@ $opt->child(
                         )
                 )),
                 $opt->title(__('Ranks from the number of messages','rcl-asgaros')),
-                
+				$opt->option('select',array(
+                    'name'=>'afrcl_rank_enable',
+                 //   'default'=>5,
+                    'parent'=>true,
+                    'options'=>array(
+                        '1'=>(__('Turn off','rcl-asgaros')),
+                        '2'=>(__('Enable','rcl-asgaros')),
+                        )
+                )),
+                $opt->child(
+                array(
+                    'name'=>'afrcl_rank_enable',
+                    'value'=>'2'//значение опции родителя
+                    ),
+				array(	
                 $opt->option('text',array('name'=>'rank1_forum','label'=>__('The first rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: Contributor','rcl-asgaros'))),
                 $opt->option('number',array('name'=>'amount1_posts','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 10','rcl-asgaros'))),
             
@@ -74,7 +100,8 @@ $opt->child(
                                 
                 $opt->option('text',array('name'=>'rank6_forum','label'=>__('The sixth rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: VIP','rcl-asgaros'))),
                 $opt->option('number',array('name'=>'amount6_posts','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 1000','rcl-asgaros'))),
-                
+                  )
+                ),
                 $opt->title(__('Information block','rcl-asgaros')),
  $opt->option('select',array(
                     'name'=>'information_enable_recall',
