@@ -7,6 +7,7 @@ if (!is_admin()):
 endif;
 function rcl_asgaros_scripts(){
     rcl_enqueue_style('rcl-asgaros',rcl_addon_url('style.css', __FILE__));
+	rcl_enqueue_script( 'rcl-feed', rcl_addon_url('js/details.polyfill.min.js', __FILE__) );
     
 }
 add_action('plugins_loaded', 'rcl_asgaros_load_plugin_textdomain',10);
@@ -142,7 +143,7 @@ echo '<div class="'.$rcl_options['afrcl_field_name_enable'].'">'.$rcl_options['a
 add_action('asgarosforum_after_post_author', 'my_function_afrcl_field_1', 40, 1);
 function my_function_afrcl_field_1($author_id) {
 global  $rcl_options;
-echo '<div class="'.$rcl_options['afrcl_field_name_enable'].'">'.get_user_meta($author_id,$rcl_options['afrcl_field_1'],1).'</div></details></div>';
+echo '<div class="afrcl-field-2"><div  hidden="'.$rcl_options['afrcl_field_name_enable'].'">'.get_user_meta($author_id,$rcl_options['afrcl_field_1'],1).'</div></div></details></div>';
 	
 }
 /* подпись на форуме при использовании произвольного поля в профиле */

@@ -154,7 +154,7 @@ $opt->child(
                  //   'default'=>5,
                     'parent'=>true,
                     'options'=>array(
-                        'element-hide'=>(__('Turn off','rcl-asgaros')),
+                        'hidden'=>(__('Turn off','rcl-asgaros')),
                         'afrcl-field'=>(__('Enable','rcl-asgaros')),
                         )
                 )),
