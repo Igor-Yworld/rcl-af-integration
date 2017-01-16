@@ -80,7 +80,7 @@ $opt->child(
                 $opt->child(
                 array(
                     'name'=>'afrcl_rank_enable',
-                    'value'=>'2'//значение опции родителя
+                    'value'=>'2'//значение опции родителя 1
                     ),
 				array(	
                 $opt->option('text',array('name'=>'rank1_forum','label'=>__('The first rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: Contributor','rcl-asgaros'))),
