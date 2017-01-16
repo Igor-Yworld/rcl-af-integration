@@ -132,6 +132,11 @@ echo '<div class="'.$rcl_options['information_enable_recall'].'"><details class=
 	{
 		echo '<div class="ucc-cou-siti">'.ucc_get_value($author_id).'</div>';
 		}
+/* Соц ссылки */		
+if(function_exists('get_slink_rcl'))
+	{
+		echo '<div class="soc-link">'.get_slink_rcl($author_id).'</div>';
+		}	
 }
 /* Дополнительное поле 1 в зоне аватара*/
 add_action('asgarosforum_after_post_author', 'my_function_afrcl_field_name_1', 40, 1);
