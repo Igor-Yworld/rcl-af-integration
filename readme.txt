@@ -18,6 +18,8 @@ Installs as a standard attachment WP-Recall. After activation go to settings WP-
 Enable and set the rating of the forum in the settings WP-Recall.
 
 == Changelog ==
+== 2.0.2 ==
+* Добавлена поддержка аддона Social Recall
 == 2.0.1 ==
 * Сгруппированы настройки
 * Добавлен <details> скрывающий блок информации, работает во всех браузерах с небольшим скриптом.
