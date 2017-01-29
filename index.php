@@ -7,7 +7,7 @@ if (!is_admin()):
 endif;
 function rcl_asgaros_scripts(){
     rcl_enqueue_style('rcl-asgaros',rcl_addon_url('style.css', __FILE__));
-	rcl_enqueue_script( 'rcl-feed', rcl_addon_url('js/details.polyfill.min.js', __FILE__) );
+//	rcl_enqueue_script( 'rcl-asgaros', rcl_addon_url('js/details.polyfill.min.js', __FILE__) );
     
 }
 add_action('plugins_loaded', 'rcl_asgaros_load_plugin_textdomain',10);
