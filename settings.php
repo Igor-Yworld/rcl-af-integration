@@ -2,7 +2,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-// Настройка дополнения
+// Настройка дополнения, редакция 2
 add_filter('admin_options_wprecall','options_rcl_asgaros');
 function options_rcl_asgaros($options){
 	
