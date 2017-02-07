@@ -7,8 +7,6 @@ if (!is_admin()):
 endif;
 function rcl_asgaros_scripts(){
     rcl_enqueue_style('rcl-asgaros',rcl_addon_url('style.css', __FILE__));
-//	rcl_enqueue_script( 'rcl-asgaros', rcl_addon_url('js/details.polyfill.min.js', __FILE__) );
-    
 }
 add_action('plugins_loaded', 'rcl_asgaros_load_plugin_textdomain',10);
 function rcl_asgaros_load_plugin_textdomain(){
@@ -47,40 +45,21 @@ function my_asgarosforum_after_post_author_rank($author_id, $author_posts) {
 global  $rcl_options;
 	$rank1 = $rcl_options['amount1_posts']; $rank2 = $rcl_options['amount2_posts']; $rank3 = $rcl_options['amount3_posts']; $rank4 = $rcl_options['amount4_posts']; $rank5 = $rcl_options['amount5_posts']; $rank6 = $rcl_options['amount6_posts'];
   if (($author_posts > $rank1) && ($author_posts <= $rank2)){
-    echo '<br /><div class="icon-status-contributor">'.$rcl_options['rank1_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
+    echo '<span class="'.$rcl_options['afrcl_rank_enable'].'"><br /><div class="icon-status-contributor">'.$rcl_options['rank1_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></span>';
   } 
   else if (($author_posts > $rank2) && ($author_posts <= $rank3)) {
-    echo '<br /><div class="icon-status-contributor">'.$rcl_options['rank2_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
+    echo '<span class="'.$rcl_options['afrcl_rank_enable'].'"><br /><div class="icon-status-contributor">'.$rcl_options['rank2_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></span>';
   } 
   else if (($author_posts > $rank3) && ($author_posts <= $rank4)) {
-    echo '<br /><div class="icon-status-contributor">'.$rcl_options['rank3_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
+    echo '<span class="'.$rcl_options['afrcl_rank_enable'].'"><br /><div class="icon-status-contributor">'.$rcl_options['rank3_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></span>';
   } 
   else if (($author_posts > $rank4) && ($author_posts <= $rank5)) {
-    echo '<br /><div class="icon-status-contributor">'.$rcl_options['rank4_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
+    echo '<span class="'.$rcl_options['afrcl_rank_enable'].'"><br /><div class="icon-status-contributor">'.$rcl_options['rank4_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></span>';
   }
   else if (($author_posts > $rank5) && ($author_posts >= $rank6)) {
-    echo '<br /><div class="icon-status-contributor">'.$rcl_options['rank6_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
-  }//else {
-   // echo '<div class="icon-status-contributor">Новичок<i class="'.$rcl_options['icon_role'].'"></i></div>';
-  //}
+    echo '<span class="'.$rcl_options['afrcl_rank_enable'].'"><br /><div class="icon-status-contributor">'.$rcl_options['rank6_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></span>';
+  }
 }
-	
-/* // Вывод роли пользователя, вариант из релизов до 1.0.4 . Расскоментировать и настроить как у вас было, если новый не устроит или нужен вывод еще ролей.
-add_action('asgarosforum_after_post_author', 'my_function_asgaros_recall_roles', 10, 1);
-function getUserRoles($id) { 
-    $user = new WP_User((int)$id); 
-    return implode(' and ', $user->roles); 
-}
-function my_function_asgaros_recall_roles($author_id) {
-	$user_info = get_userdata($author_id);
-    if(getUserRoles($author_id)=='administrator') {echo '<div class="icon-status-admin">Админ&nbsp;<i class="fa fa-info-circle"></i></div>';}
-else 
-	if(getUserRoles($author_id)=='contributor') {echo '<div class="icon-status-contributor">Участник&nbsp;<i class="fa fa-info-circle"></i></div>';}
-else 
-	if(getUserRoles($author_id)=='author') {echo '<div class="icon-status-author">Модератор&nbsp;<i class="fa fa-info-circle"></i></div>';}
-else 
-	if(getUserRoles($author_id)=='editor') {echo '<div class="icon-status-editor">Редактор&nbsp;<i class="fa fa-info-circle"></i></div>';};
-} */
 /* Модератор, администратор, остальные участники форума, зависит от званий на сайте*/
 add_action('asgarosforum_after_post_author', 'my_asgarosforum_after_post_administration', 10, 2);
 function getUserRoles($id) { 
@@ -90,20 +69,46 @@ function getUserRoles($id) {
 function my_asgarosforum_after_post_administration($author_id, $author_posts) {
 global  $rcl_options;
 /* Иконки и ссылки */
+    echo '<div class="'.$rcl_options['afrcl_progress_enable'].'"><div class="star"><progress class="progress" value="'.$author_posts.'" max="'.$rcl_options['progress_number'].'"></progress><span><i class="fa '.$rcl_options['progress_icon1'].'"></i>&nbsp;<i class="fa '.$rcl_options['progress_icon2'].'"></i>&nbsp;<i class="fa '.$rcl_options['progress_icon3'].'"></i>&nbsp;<i class="fa '.$rcl_options['progress_icon4'].'"></i><i class="fa '.$rcl_options['progress_icon6'].'"></i>'.$rcl_options['progress_goal'].'</span></div></div>';
 if (getUserRoles($author_id)=='administrator') {
-    echo '<div class="icon-status-admin">'.$rcl_options['admin_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
+    echo '<div class="'.$rcl_options['afrcl_roles_enable'].'"><div class="icon-status-admin">'.$rcl_options['admin_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></div>';
   } else {
     if (AsgarosForumPermissions::isModerator($author_id)) {
-    echo '<div class="icon-status-moderator">'.$rcl_options['moderator_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
+    echo '<div class="'.$rcl_options['afrcl_roles_enable'].'"><div class="icon-status-moderator">'.$rcl_options['moderator_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></div>';
   } else {
 	if(getUserRoles($author_id)=='contributor') {
-	echo '<div class="icon-status-contributor">'.$rcl_options['contributor_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
+	echo '<div class="'.$rcl_options['afrcl_roles_enable'].'"><div class="icon-status-contributor">'.$rcl_options['contributor_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></div>';
 	} else {
 	if(getUserRoles($author_id)=='author') {
-	echo '<div class="icon-status-author">'.$rcl_options['author_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';
+	echo '<div class="'.$rcl_options['afrcl_roles_enable'].'"><div class="icon-status-author">'.$rcl_options['author_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></div>';
 } else {
 	if(getUserRoles($author_id)=='editor') {
-	echo '<div class="icon-status-editor">'.$rcl_options['editor_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div>';};
+	echo '<div class="'.$rcl_options['afrcl_roles_enable'].'"><div class="icon-status-editor">'.$rcl_options['editor_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></div>';};
+           }	
+         }
+      }
+    }
+ }
+ /* Модератор, администратор, редактор, автор, пользователь - картинка вместо роли*/
+add_action('asgarosforum_after_post_author', 'my_asgarosforum_after_post_administration_img', 10, 2);
+
+function my_asgarosforum_after_post_administration_img($author_id, $author_posts) {
+global  $rcl_options;
+/* Иконки и ссылки */
+if (getUserRoles($author_id)=='administrator') {
+    echo '<div class="'.$rcl_options['afrcl_roles_img_enable'].'"><div class="status-admin-img"><img src="'.wp_get_attachment_image_url( $rcl_options['admin_forum_img'], 'full' ).'" width="110" height="24" alt=""></div></div>';
+  } else {
+    if (AsgarosForumPermissions::isModerator($author_id)) {
+    echo '<div class="'.$rcl_options['afrcl_roles_img_enable'].'"><div class="status-moderator-img"><img src="'.wp_get_attachment_image_url( $rcl_options['moderator_forum_img'], 'full' ).'" width="110" height="24" alt=""></div></div>';
+  } else {
+	if(getUserRoles($author_id)=='contributor') {
+	echo '<div class="'.$rcl_options['afrcl_roles_img_enable'].'"><div class="status-contributor-img"><img src="'.wp_get_attachment_image_url( $rcl_options['contributor_forum_img'], 'full' ).'" width="110" height="24" alt=""></div></div>';
+	} else {
+	if(getUserRoles($author_id)=='author') {
+	echo '<div class="'.$rcl_options['afrcl_roles_img_enable'].'"><div class="status-author-img"><img src="'.wp_get_attachment_image_url( $rcl_options['author_forum_img'], 'full' ).'" width="110" height="24" alt=""></div></div>';
+} else {
+	if(getUserRoles($author_id)=='editor') {
+	echo '<div class="'.$rcl_options['afrcl_roles_img_enable'].'"><div class="status-editor-img"><img src="'.wp_get_attachment_image_url( $rcl_options['editor_forum_img'], 'full' ).'" width="110" height="24" alt=""></div></div>';};
            }	
          }
       }
@@ -148,8 +153,19 @@ echo '<div class="'.$rcl_options['afrcl_field_name_enable'].'">'.$rcl_options['a
 add_action('asgarosforum_after_post_author', 'my_function_afrcl_field_1', 40, 1);
 function my_function_afrcl_field_1($author_id) {
 global  $rcl_options;
-echo '<div class="afrcl-field-2"><div  hidden="'.$rcl_options['afrcl_field_name_enable'].'">'.get_user_meta($author_id,$rcl_options['afrcl_field_1'],1).'</div></div></details></div>';
+echo '<div class="'.$rcl_options['afrcl_field_name_enable'].'">'.get_user_meta($author_id,$rcl_options['afrcl_field_1'],1).'</div></details></div>';
 	
+}
+/* объявление пользователя */
+add_action('asgarosforum_after_post_author', 'my_function_announcement', 50, 1);
+function my_function_announcement($author_id) {
+global  $rcl_options;
+echo '<p><div class="'.$rcl_options['afrcl_announcement_enable'].'"><a href="#modal'.$author_id.'" class="button openModal">'.$rcl_options['announcement_title'].'&nbsp;<i class="fa '.$rcl_options['announcement_img'].'" aria-hidden="true"></i></a></p>';
+echo '<div id="modal'.$author_id.'" class="modal">
+<div>
+<!--noindex--><div>'.get_user_meta($author_id,$rcl_options['announcement'],1).'</div><!--/noindex-->
+<a href="#close" title="Закрыть">Закрыть</a></div></div>	
+</div>';
 }
 /* подпись на форуме при использовании произвольного поля в профиле */
 add_action('asgarosforum_after_post_message', 'my_function_signature', 10, 1);
@@ -157,4 +173,4 @@ function my_function_signature($author_id) {
 global  $rcl_options;
 echo '<div class="'.$rcl_options['afrcl_signature_enable'].'">'.get_user_meta($author_id,$rcl_options['signature'],1).'</div>';
 	
-} 
+}

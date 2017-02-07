@@ -1,33 +1,27 @@
-=== Asgaros Forum to WP-Recall ===
-Contributors: Igor-Yworld
-Requires at least: 4.7
-Tested up to: 4.7
-Stable tag: 2.0.4
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+== Установка и обновление ==
+* Устанавливается стандартно как все дополнения к Wp-Recall
 
-Easy integration plugins Asgaros Forum and WP-Recall
-
-== Description ==
-Adds links, icons, user profile, personal messages and the other tabs in the profile. Shows the user role of the forum and website, rating shared, the opportunity to vote for the post. The signature on the forum and other functions.
-
-= Installation =
-Installs as a standard attachment WP-Recall. After activation go to settings WP-Recall and activate the rating forum. Ready.
-
-== Frequently Asked Questions ==
-= There is no possibility to vote for the message =
-Enable and set the rating of the forum in the settings WP-Recall.
+== FAQ ==
+* Не вижу форума и не нахожу страницу с ним?
+* Установите плагин форума Asgaros Forum и перейдите к его настройкам.
 
 == Changelog ==
+== 2.0.5 ==
+* Добавлен мотивирующий прогресс бар
+* Исправлено включение и выключение функций в настройках
+* Добавлено мини объявление пользователя
+* Добавлены картинки званий на форуме
+* Небольшие изменения в стилях
+* Общая оптимизация кода
 == 2.0.4 ==
-Исправлена работа при включении минимизации скриптов
+* Исправлена ошибка при минимизации сриптов
 == 2.0.3 ==
-Исправлено отображение в различных браузерах
+* Исправлен показ блока информации в разных браузерах
 == 2.0.2 ==
 * Добавлена поддержка аддона Social Recall
 == 2.0.1 ==
-* Сгруппированы настройки
-* Добавлен <details> скрывающий блок информации, работает во всех браузерах с небольшим скриптом.
+* Изменен принцип настроек
+* Добавлен спойлер скрывающий блок информации
 * Небольшие изменения в выводе информации
 * Добавлен вывод даты регистрации
 * Включение/выключение иконок в профиль

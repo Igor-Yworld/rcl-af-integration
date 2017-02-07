@@ -1,78 +1,87 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Asgaros Forum to WP-Recall\n"
-"POT-Creation-Date: 2016-12-12 18:53+0300\n"
-"PO-Revision-Date: 2016-12-12 19:19+0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2017-02-06 22:11+0300\n"
+"PO-Revision-Date: 2017-02-06 22:12+0300\n"
+"Last-Translator: Игорь <promo@yworld.ru>\n"
 "Language-Team: Yworld <yworld@yandex.ru>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Basepath: C:\\Users\\Игорь\\Desktop\\сайт поддержка\\дополнение "
+"рекал асгарос\\2.0.5\\\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e\n"
-"X-Poedit-SearchPath-0: index.php\n"
-"X-Poedit-SearchPath-1: settings.php\n"
+"X-Poedit-SearchPath-0: rcl-asgaros\n"
 
-#: index.php:39
+#: rcl-asgaros/index.php:38
 msgid "Rating"
 msgstr "Рейтинг"
 
-#: index.php:116
+#: rcl-asgaros/index.php:122
 msgid "Profile"
 msgstr "Профиль"
 
-#: index.php:117
+#: rcl-asgaros/index.php:123
 msgid "Private message"
 msgstr "Личное сообщение"
 
-#: index.php:118
+#: rcl-asgaros/index.php:124
 msgid "Reviews"
 msgstr "Отзывы"
 
-#: index.php:119
+#: rcl-asgaros/index.php:125
 msgid "Groups"
 msgstr "Группы"
 
-#: index.php:120
+#: rcl-asgaros/index.php:126
 msgid "Publications"
 msgstr "Публикации"
 
-#: index.php:127
+#: rcl-asgaros/index.php:133
 msgid "Information"
 msgstr "Информация"
 
-#: index.php:127
+#: rcl-asgaros/index.php:133
 msgid "Registration"
 msgstr "Регистрация"
 
-#: settings.php:12
+#: rcl-asgaros/settings.php:12
 msgid "Forum settings"
 msgstr "Настройки форума"
 
-#: settings.php:15
+#: rcl-asgaros/settings.php:15
 msgid "User signature"
 msgstr "Подпись пользователей"
 
-#: settings.php:21 settings.php:54 settings.php:85 settings.php:97
-#: settings.php:108 settings.php:119 settings.php:130
+#: rcl-asgaros/settings.php:21 rcl-asgaros/settings.php:42
+#: rcl-asgaros/settings.php:65 rcl-asgaros/settings.php:89
+#: rcl-asgaros/settings.php:113 rcl-asgaros/settings.php:139
+#: rcl-asgaros/settings.php:149 rcl-asgaros/settings.php:185
+#: rcl-asgaros/settings.php:197 rcl-asgaros/settings.php:208
+#: rcl-asgaros/settings.php:219 rcl-asgaros/settings.php:230
 msgid "Turn off"
 msgstr "Не показывать"
 
-#: settings.php:22 settings.php:55 settings.php:86 settings.php:98
-#: settings.php:109 settings.php:120 settings.php:131
+#: rcl-asgaros/settings.php:22 rcl-asgaros/settings.php:43
+#: rcl-asgaros/settings.php:66 rcl-asgaros/settings.php:90
+#: rcl-asgaros/settings.php:114 rcl-asgaros/settings.php:140
+#: rcl-asgaros/settings.php:150 rcl-asgaros/settings.php:186
+#: rcl-asgaros/settings.php:198 rcl-asgaros/settings.php:209
+#: rcl-asgaros/settings.php:220 rcl-asgaros/settings.php:231
 msgid "Enable"
 msgstr "Показать"
 
-#: settings.php:32
+#: rcl-asgaros/settings.php:32
 msgid "Install MetaKey additional signature field"
 msgstr "Вписать MetaKey доп. поля подписи"
 
-#: settings.php:32 settings.php:142
+#: rcl-asgaros/settings.php:32 rcl-asgaros/settings.php:53
+#: rcl-asgaros/settings.php:242
 msgid ""
 "Creating an additional text field in your profile and set it MetaKey. Not "
 "necessary."
@@ -80,215 +89,324 @@ msgstr ""
 "Создайте дополнительное текстовоое поля в вашем профиле и впишите его "
 "MetaKey. Не обязательно."
 
-#: settings.php:32
+#: rcl-asgaros/settings.php:32
 msgid "Example: podpis_na_forume"
 msgstr "Пример: podpis_na_forume"
 
-#: settings.php:36
+#: rcl-asgaros/settings.php:36
+msgid "User announcement"
+msgstr "Объявления пользователей"
+
+#: rcl-asgaros/settings.php:53
+msgid "Install MetaKey additional announcement field"
+msgstr "Вписать MetaKey доп. поля объявления"
+
+#: rcl-asgaros/settings.php:53
+msgid "Example: announcement_na_forume"
+msgstr "Пример: announcement_na_forume"
+
+#: rcl-asgaros/settings.php:54
+msgid "Add title Ad"
+msgstr "Название объявления"
+
+#: rcl-asgaros/settings.php:54
+msgid "Enter the name of the button "
+msgstr "Ввести название кнопки объявления"
+
+#: rcl-asgaros/settings.php:54
+msgid "Example: Announcement"
+msgstr "Пример: Объявление"
+
+#: rcl-asgaros/settings.php:55 rcl-asgaros/settings.php:125
+#: rcl-asgaros/settings.php:126 rcl-asgaros/settings.php:127
+#: rcl-asgaros/settings.php:128 rcl-asgaros/settings.php:129
+msgid "Add icon Font Awesome"
+msgstr "Добавить иконку Font Awesome"
+
+#: rcl-asgaros/settings.php:55 rcl-asgaros/settings.php:125
+#: rcl-asgaros/settings.php:126 rcl-asgaros/settings.php:127
+#: rcl-asgaros/settings.php:128 rcl-asgaros/settings.php:129
+msgid ""
+"Add icon http://fontawesome.ru/all-icons/, insert in such a form: fa-"
+"bullhorn "
+msgstr ""
+"Добавить иконку из набора http://fontawesome.ru/all-icons/,  вставить в "
+"форму вот так: fa-bullhorn "
+
+#: rcl-asgaros/settings.php:55 rcl-asgaros/settings.php:125
+#: rcl-asgaros/settings.php:126 rcl-asgaros/settings.php:127
+#: rcl-asgaros/settings.php:128 rcl-asgaros/settings.php:129
+msgid "Example: fa-bullhorn"
+msgstr "Пример: fa-bullhorn"
+
+#: rcl-asgaros/settings.php:59
 msgid "User roles"
 msgstr "Роли пользователей"
 
-#: settings.php:38
+#: rcl-asgaros/settings.php:76
 msgid "Forum administrator"
 msgstr "Администратор форума"
 
-#: settings.php:38
+#: rcl-asgaros/settings.php:76
 msgid "Display name of the administrator role"
 msgstr "Отображаемое название роли администратора."
 
-#: settings.php:38
+#: rcl-asgaros/settings.php:76
 msgid "Example: Admin"
 msgstr "Пример: Админ"
 
-#: settings.php:40
+#: rcl-asgaros/settings.php:77
 msgid "Forum moderftor"
 msgstr "Модератор форума"
 
-#: settings.php:40
+#: rcl-asgaros/settings.php:77
 msgid "Display name of the moderftor role"
 msgstr "Отображаемое название роли модератора."
 
-#: settings.php:40
+#: rcl-asgaros/settings.php:77
 msgid "Example: Moderftor"
 msgstr "Пример: Модератор"
 
-#: settings.php:42
+#: rcl-asgaros/settings.php:78
 msgid "Forum contributor"
 msgstr "Участник форума"
 
-#: settings.php:42
+#: rcl-asgaros/settings.php:78
 msgid "Display name of the contributor role"
 msgstr "Отображаемое название роли участника."
 
-#: settings.php:42 settings.php:60
+#: rcl-asgaros/settings.php:78 rcl-asgaros/settings.php:159
 msgid "Example: Contributor"
 msgstr "Пример: Участник"
 
-#: settings.php:44
+#: rcl-asgaros/settings.php:79
 msgid "Author(The role of the site)"
 msgstr "Автор(роль сайта)"
 
-#: settings.php:44
+#: rcl-asgaros/settings.php:79
 msgid "Display name of the author role"
 msgstr "Отображаемое название роли автора"
 
-#: settings.php:44
+#: rcl-asgaros/settings.php:79
 msgid "Example: Author"
 msgstr "Пример: Автор"
 
-#: settings.php:46
+#: rcl-asgaros/settings.php:80
 msgid "Editor(The role of the site)"
 msgstr "Редактор(роль сайта)"
 
-#: settings.php:46
+#: rcl-asgaros/settings.php:80
 msgid "Display name of the editor role"
 msgstr "Отображаемое название роли редактора"
 
-#: settings.php:46
+#: rcl-asgaros/settings.php:80
 msgid "Example: Editor"
 msgstr "Пример: Редактор"
 
-#: settings.php:48
-msgid "The icon next to the role"
-msgstr "Иконка рядом с ролью"
+#: rcl-asgaros/settings.php:83
+msgid "Images instead of role names"
+msgstr "Картинка вместо названия роли"
 
-#: settings.php:58
-msgid "Ranks from the number of messages"
-msgstr "Звания от количества сообщений"
+#: rcl-asgaros/settings.php:100
+msgid "Enter the id pictures admin"
+msgstr "Введите ID картинки администратора"
 
-#: settings.php:60
-msgid "The first rank"
-msgstr "Первое звание"
+#: rcl-asgaros/settings.php:100 rcl-asgaros/settings.php:101
+#: rcl-asgaros/settings.php:102 rcl-asgaros/settings.php:103
+#: rcl-asgaros/settings.php:104
+msgid ""
+"How to get the ID of the image, refer to the description https://codeseller."
+"ru/products/asgaros-forum-wp-recall/ size 110x24"
+msgstr ""
+"Как узнать ID картинки, прочитайте в описании к дополнению https://"
+"codeseller.ru/products/asgaros-forum-wp-recall/ размер 110x24"
 
-#: settings.php:60 settings.php:63 settings.php:66 settings.php:69
-#: settings.php:72 settings.php:75
-msgid "Do not fill the field if you do not use the rank."
-msgstr "Не заполняйте поля если не используете звания."
+#: rcl-asgaros/settings.php:100 rcl-asgaros/settings.php:101
+#: rcl-asgaros/settings.php:102 rcl-asgaros/settings.php:103
+#: rcl-asgaros/settings.php:104
+msgid "Example: 80"
+msgstr "Пример: 80"
 
-#: settings.php:61 settings.php:64 settings.php:67 settings.php:70
-#: settings.php:73 settings.php:76
-msgid "Number of posts"
-msgstr "Количество сообщений"
+#: rcl-asgaros/settings.php:101
+msgid "Enter the id pictures moderator"
+msgstr "Введите ID картинки модератора"
 
-#: settings.php:61
-msgid "Example: 10"
-msgstr "Пример: 10"
+#: rcl-asgaros/settings.php:102
+msgid "Enter the id pictures contributor"
+msgstr "Введите ID картинки участника"
 
-#: settings.php:63
-msgid "Second rank"
-msgstr "Второе звание"
+#: rcl-asgaros/settings.php:103
+msgid "Enter the id pictures author"
+msgstr "Введите ID картинки автора"
 
-#: settings.php:63
-msgid "Example: Activist"
-msgstr "Пример: Активист"
+#: rcl-asgaros/settings.php:104
+msgid "Enter the id pictures editor"
+msgstr "Введите ID картинки редактора"
 
-#: settings.php:64
-msgid "Example: 50"
-msgstr "Пример: 50"
+#: rcl-asgaros/settings.php:107
+msgid "Progress bar"
+msgstr "Прогресс бар"
 
-#: settings.php:66
-msgid "A third rank"
-msgstr "Третье звание"
+#: rcl-asgaros/settings.php:124
+msgid "How many posts to the target"
+msgstr "Сколько сообщений до цели"
 
-#: settings.php:66
-msgid "Example: lodger"
-msgstr "Пример: Постоялец"
+#: rcl-asgaros/settings.php:124
+msgid "How many messages to the target that you define."
+msgstr "Количество сообщений до выбранной вами цели"
 
-#: settings.php:67
-msgid "Example: 100"
-msgstr "Пример: 100"
-
-#: settings.php:69
-msgid "The fourth rank"
-msgstr "Четвертое звание"
-
-#: settings.php:69
-msgid "Example: Frequenter"
-msgstr "Пример: Завсегдатай"
-
-#: settings.php:70
+#: rcl-asgaros/settings.php:124 rcl-asgaros/settings.php:169
 msgid "Example: 500"
 msgstr "Пример: 500"
 
-#: settings.php:72
-msgid "The fifth rank"
-msgstr "Пятое звание"
+#: rcl-asgaros/settings.php:130
+msgid "Name of target"
+msgstr "Название цели"
 
-#: settings.php:72
-msgid "Example: The local"
-msgstr "Пример: Здешний"
+#: rcl-asgaros/settings.php:130
+msgid "Write goals abbreviation "
+msgstr "Сокращенно или аббривиатура"
 
-#: settings.php:73
-msgid "Example: 800"
-msgstr "Пример: 800"
-
-#: settings.php:75
-msgid "The sixth rank"
-msgstr "Шестое звание"
-
-#: settings.php:75
+#: rcl-asgaros/settings.php:130 rcl-asgaros/settings.php:174
 msgid "Example: VIP"
 msgstr "Пример: VIP"
 
-#: settings.php:76
+#: rcl-asgaros/settings.php:133
+msgid "The icon next to the role"
+msgstr "Иконка рядом с ролью"
+
+#: rcl-asgaros/settings.php:143
+msgid "Ranks from the number of messages"
+msgstr "Звания от количества сообщений"
+
+#: rcl-asgaros/settings.php:159
+msgid "The first rank"
+msgstr "Первое звание"
+
+#: rcl-asgaros/settings.php:159 rcl-asgaros/settings.php:162
+#: rcl-asgaros/settings.php:165 rcl-asgaros/settings.php:168
+#: rcl-asgaros/settings.php:171 rcl-asgaros/settings.php:174
+msgid "Do not fill the field if you do not use the rank."
+msgstr "Не заполняйте поля если не используете звания."
+
+#: rcl-asgaros/settings.php:160 rcl-asgaros/settings.php:163
+#: rcl-asgaros/settings.php:166 rcl-asgaros/settings.php:169
+#: rcl-asgaros/settings.php:172 rcl-asgaros/settings.php:175
+msgid "Number of posts"
+msgstr "Количество сообщений"
+
+#: rcl-asgaros/settings.php:160
+msgid "Example: 10"
+msgstr "Пример: 10"
+
+#: rcl-asgaros/settings.php:162
+msgid "Second rank"
+msgstr "Второе звание"
+
+#: rcl-asgaros/settings.php:162
+msgid "Example: Activist"
+msgstr "Пример: Активист"
+
+#: rcl-asgaros/settings.php:163
+msgid "Example: 50"
+msgstr "Пример: 50"
+
+#: rcl-asgaros/settings.php:165
+msgid "A third rank"
+msgstr "Третье звание"
+
+#: rcl-asgaros/settings.php:165
+msgid "Example: lodger"
+msgstr "Пример: Постоялец"
+
+#: rcl-asgaros/settings.php:166
+msgid "Example: 100"
+msgstr "Пример: 100"
+
+#: rcl-asgaros/settings.php:168
+msgid "The fourth rank"
+msgstr "Четвертое звание"
+
+#: rcl-asgaros/settings.php:168
+msgid "Example: Frequenter"
+msgstr "Пример: Завсегдатай"
+
+#: rcl-asgaros/settings.php:171
+msgid "The fifth rank"
+msgstr "Пятое звание"
+
+#: rcl-asgaros/settings.php:171
+msgid "Example: The local"
+msgstr "Пример: Здешний"
+
+#: rcl-asgaros/settings.php:172
+msgid "Example: 800"
+msgstr "Пример: 800"
+
+#: rcl-asgaros/settings.php:174
+msgid "The sixth rank"
+msgstr "Шестое звание"
+
+#: rcl-asgaros/settings.php:175
 msgid "Example: 1000"
 msgstr "Пример: 1000"
 
-#: settings.php:78 settings.php:81
+#: rcl-asgaros/settings.php:178 rcl-asgaros/settings.php:181
 msgid "Information block"
 msgstr "Информационный блок"
 
-#: settings.php:90
+#: rcl-asgaros/settings.php:190
 msgid "Profile Icons"
 msgstr "Иконки профиля"
 
-#: settings.php:93
+#: rcl-asgaros/settings.php:193
 msgid "Enable reviews"
 msgstr "Включить отзывы"
 
-#: settings.php:104
+#: rcl-asgaros/settings.php:204
 msgid "Enable groups"
 msgstr "Включить группы"
 
-#: settings.php:115
+#: rcl-asgaros/settings.php:215
 msgid "Enable publications"
 msgstr "Включить публикации"
 
-#: settings.php:124
+#: rcl-asgaros/settings.php:224
 msgid "Additional field"
 msgstr "Дополнительное поле"
 
-#: settings.php:141
+#: rcl-asgaros/settings.php:241
 msgid "Name"
 msgstr "Имя"
 
-#: settings.php:141
+#: rcl-asgaros/settings.php:241
 msgid "Enter the the field name. Not necessary."
 msgstr "Введите название дополнительного поля. Не обязательно"
 
-#: settings.php:141
+#: rcl-asgaros/settings.php:241
 msgid "Example: android"
 msgstr "Пример: Android"
 
-#: settings.php:142
+#: rcl-asgaros/settings.php:242
 msgid "Install MetaKey additional field"
 msgstr "Введите MetaKey дополнительно поля"
 
-#: settings.php:142
+#: rcl-asgaros/settings.php:242
 msgid "Example: android_version"
 msgstr "Пример: android_version"
 
-#~ msgid "Admin"
-#~ msgstr "Админ"
+#~ msgid ""
+#~ "How to get the ID of the image, refer to the description https://"
+#~ "codeseller.ru/products/asgaros-forum-wp-recall/"
+#~ msgstr ""
+#~ "Как узнать ID картинки, прочитайте в описании к дополнению https://"
+#~ "codeseller.ru/products/asgaros-forum-wp-recall/"
 
-#~ msgid "Moderator"
-#~ msgstr "Модератор"
+#~ msgid "Install the full path to the image"
+#~ msgstr "Впишите полный путь до изображения"
 
-#~ msgid "Contributor"
-#~ msgstr "Участник"
+#~ msgid "Enter the full path to the image, size 32x32."
+#~ msgstr "Введите полный путь до изображения, размер 32x32"
 
-#~ msgid "Author"
-#~ msgstr "Автор"
-
-#~ msgid "Editor"
-#~ msgstr "Редактор"
+#~ msgid "Example: http://site.ru/wp-content/uploads/2017/02/megaphone.png"
+#~ msgstr "Пример: http://site.ru/wp-content/uploads/2017/02/megaphone.png"

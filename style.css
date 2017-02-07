@@ -2,30 +2,48 @@
 #af-wrapper .icon-status-indent{
 padding-left:5px;
 }
+#af-wrapper .icon-status-indent1{
+padding-left:0px;
+}
 #af-wrapper .icon-status-admin{
 font-size: 13px;
 font-weight:bold;
-color: #F43D2A;
+color: #fff;
+background: #f29987;
+padding: 2px;
+border-radius: 2px;
 }
 #af-wrapper .icon-status-moderator {
-	font-size: 13px;
-	font-weight:bold;
-    color: #469AC6;    
+font-size: 13px;
+font-weight:bold;
+color: #fff;
+background: #84cd1b;
+padding: 2px;
+border-radius: 2px;    
 }
 #af-wrapper .icon-status-contributor{
 font-size: 13px;
-font-style: normal;
-color: #E3BB24;
+font-weight:bold;
+color: #fff;
+background: #00c097;
+padding: 2px;
+border-radius: 2px;
 }
 #af-wrapper .icon-status-author{
 font-size: 13px;
-font-style: normal;
-color: #099922;
+font-weight:bold;
+color: #fff;
+background: #CACACB;
+padding: 2px;
+border-radius: 2px;
 }
 #af-wrapper .icon-status-editor{
 font-size: 13px;
-font-style: normal;
-color: #099922;
+font-weight:bold;
+color: #fff;
+background: #5e4a3f;
+padding: 2px;
+border-radius: 2px;
 }
 #af-wrapper .status-forum-online {
     background-color: #bfffbd;
@@ -66,6 +84,16 @@ padding: 0px 0px 2px;
 margin-bottom: 20px;
 border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
+#af-wrapper .announcement{
+font-size: 12px;
+text-align: left;
+background-color:#F43D2A;
+padding: 0px 8px;
+border-radius: 2px;
+}
+#af-wrapper .announcement a{
+color: #fff;
+}
 #af-wrapper .element-hide{
 display: none;
 }
@@ -78,13 +106,16 @@ display: none;
 #af-wrapper .info-hide{
 display: none;
 }
+#af-wrapper .announcement-hide{
+display: none;
+}
 #af-wrapper .afrcl-field{
     font-size: smaller;
     font-weight: bold;
     color: #469AC6;
 }
 /* спойлер */
-#af-wrapper .details summary {
+#af-wrapper .details summary { /* строки-заголовок для клика */
   position: relative;
   font-size: smaller;
   background: #2d89cc;
@@ -93,15 +124,206 @@ display: none;
   color: #fff;
   cursor: pointer;
 }
-#af-wrapper .details summary::-webkit-details-marker {
+#af-wrapper .details summary::-webkit-details-marker { /* треугольник */
    position: absolute;
    right: 1px;
    top: 35%;
 }
-#af-wrapper .details[open] summary {
+#af-wrapper .details[open] summary { /* цвет строки-заголовка в открытом виде */
   background: #c0c0c0;
 }
 #af-wrapper .soc-link{
 border-top: 1px solid rgba(0, 0, 0, 0.2);
 border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* Контейнер объявлений */
+.modal {
+
+/* Слой перекрытия */
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,0.5);
+z-index: 10000;
+
+/* Трансформации прозрачности при открытии  */
+-webkit-transition: opacity 500ms ease-in;
+-moz-transition: opacity 500ms ease-in;
+transition: opacity 500ms ease-in;
+
+/* Скрываем изначально */
+opacity: 0;
+pointer-events: none;
+}
+
+/* Показываем модальное окно */
+.modal:target {
+opacity: 1;
+pointer-events: auto;
+}
+
+/* Содержание */
+.modal > div {
+width: 100%;	
+max-width: 400px;
+background: #ffffff;
+position: relative;
+margin: 10% auto;
+
+/* По умолчанию минимизируем анимацию */
+-webkit-animation: minimise 500ms linear;
+
+/* Придаем хороший вид */
+padding: 30px;
+-moz-border-radius: 7px;
+border-radius: 7px;
+-webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+-moz-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+text-shadow: 0 1px 0 #fff;
+}
+
+/* Изменяем анимацию при открытии модального окна*/
+.modal:target > div {
+-webkit-animation-name: bounce;
+}
+
+.modal h2 {
+font-size: 36px;
+padding: 0 0 20px;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+  	-webkit-transform: scale3d(0.1,0.1,1);
+  	-webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+  55% {
+  	-webkit-transform: scale3d(1.08,1.08,1);
+  	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0);
+  }
+  75% {
+  	-webkit-transform: scale3d(0.95,0.95,1);
+  	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  }
+  100% {
+  	-webkit-transform: scale3d(1,1,1);
+  	-webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+}
+
+@-webkit-keyframes minimise {
+  0% {
+  	-webkit-transform: scale3d(1,1,1);
+  }
+  100% {
+  	-webkit-transform: scale3d(0.1,0.1,1);
+  }
+}
+
+/* Ссылка на кнопку Закрыть */
+.modal a[href="#close"] {
+position: absolute;
+right: 0;
+top: 0;
+color: transparent;
+}
+
+/* Сбрасываем изменения */
+.modal a[href="#close"]:focus {
+outline: none;
+}
+
+/* Создаем кнопку Закрыть */
+.modal a[href="#close"]:after {
+content: 'X';
+display: block;
+
+/* Позиционируем */
+position: absolute;
+right: -10px;
+top: -10px;
+width: 20px;
+padding: 1px 1px 1px 2px;
+
+/* Стили */
+text-decoration: none;
+text-shadow: none;
+text-align: center;
+font-weight: bold;
+background: #000;
+color: #ffffff;
+border: 3px solid #ffffff;
+-moz-border-radius: 20px;
+border-radius: 20px;
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.modal a[href="#close"]:focus:after,
+.modal a[href="#close"]:hover:after {
+-webkit-transform: scale(1.1,1.1);
+-moz-transform: scale(1.1,1.1);
+}
+
+.modal a[href="#close"]:focus:after {
+outline: 0px solid #000;
+}
+
+/* Открываем модальное окно */
+a.openModal {
+
+}
+
+a.openModal:hover,
+a.openModal:focus {
+}
+
+.modal .modal_title {
+	display: block;
+	text-align: center;
+	font-size: 22pt;
+}
+#af-wrapper .progress {
+	overflow: hidden;
+	max-width: 100%;
+	height: 16px;
+	background: #F5C21B;
+    background-image: none;
+	border-radius: 2px;
+	margin-top: 5px;
+	margin-bottom: 1px;
+}
+#af-wrapper .star {
+	display:block;   
+    position:relative;
+}
+#af-wrapper .star span {
+    display:block;
+    position:absolute;
+	font-weight: bold;
+    top:1px;   
+    left:0px;
+    color:#fff;
+    padding:2px 3px;
+}
+#af-wrapper progress::-moz-progress-bar {
+    background: #F5C21B;
+    border-radius: 2px;
+}
+#af-wrapper progress::-webkit-progress-bar {
+    background: #cccccc;
+}
+#af-wrapper progress::-webkit-progress-value {
+    background: #F5C21B;
+    border-radius: 2px;
+}
+@media screen and (max-width: 600px) {
+  #af-wrapper .star {
+    visibility: hidden;
+    display: none;
+  }
 }
