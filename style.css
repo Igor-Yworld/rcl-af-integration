@@ -8,42 +8,34 @@ padding-left:0px;
 #af-wrapper .icon-status-admin{
 font-size: 13px;
 font-weight:bold;
-color: #fff;
-background: #f29987;
-padding: 2px;
-border-radius: 2px;
+color: #F43D2A;
 }
 #af-wrapper .icon-status-moderator {
-font-size: 13px;
-font-weight:bold;
-color: #fff;
-background: #84cd1b;
-padding: 2px;
-border-radius: 2px;    
+	font-size: 13px;
+	font-weight:bold;
+    color: #469AC6;    
 }
 #af-wrapper .icon-status-contributor{
 font-size: 13px;
-font-weight:bold;
-color: #fff;
-background: #00c097;
-padding: 2px;
-border-radius: 2px;
+font-style: normal;
+color: #E3BB24;
 }
 #af-wrapper .icon-status-author{
 font-size: 13px;
-font-weight:bold;
-color: #fff;
-background: #CACACB;
-padding: 2px;
-border-radius: 2px;
+font-style: normal;
+color: #099922;
 }
 #af-wrapper .icon-status-editor{
 font-size: 13px;
-font-weight:bold;
-color: #fff;
-background: #5e4a3f;
+font-style: normal;
+color: #099922;
+}
+#af-wrapper .status-author-rating{
+font-size: 13px;
+font-style: normal;
+color: #099922;
+background-color: #bfffbd;
 padding: 2px;
-border-radius: 2px;
 }
 #af-wrapper .status-forum-online {
     background-color: #bfffbd;

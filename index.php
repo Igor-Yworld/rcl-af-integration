@@ -60,7 +60,29 @@ global  $rcl_options;
     echo '<span class="'.$rcl_options['afrcl_rank_enable'].'"><br /><div class="icon-status-contributor">'.$rcl_options['rank6_forum'].'<i class="'.$rcl_options['icon_role'].'"></i></div></span>';
   }
 }
-/* Модератор, администратор, остальные участники форума, зависит от званий на сайте*/
+// Звание на форуме, зависят от рейтинга.
+add_action('asgarosforum_after_post_author', 'asgarosforum_after_author_rating', 10, 5);
+function asgarosforum_after_author_rating($author_id, $author_posts) {
+global  $rcl_options;
+    $author_posts = rcl_get_user_rating($author_id);
+	$rank_rating1 = $rcl_options['author_rating_1']; $rank_rating2 = $rcl_options['author_rating_2']; $rank_rating3 = $rcl_options['author_rating_3']; $rank_rating4 = $rcl_options['author_rating_4']; $rank_rating5 = $rcl_options['author_rating_5']; $rank_rating6 = $rcl_options['author_rating_6'];
+  if (($author_posts > $rank_rating1) && ($author_posts <= $rank_rating2)){
+    echo '<span class="'.$rcl_options['afrcl_rank_rating_enable'].'"><br /><div class="status-author-rating">'.$rcl_options['rank1_rating_forum'].'&nbsp;<i class="fa '.$rcl_options['rank_rating_icon1'].'"></i></div></span>';
+  } 
+  else if (($author_posts > $rank_rating2) && ($author_posts <= $rank_rating3)) {
+    echo '<span class="'.$rcl_options['afrcl_rank_rating_enable'].'"><br /><div class="status-author-rating">'.$rcl_options['rank2_rating_forum'].'&nbsp;<i class="fa '.$rcl_options['rank_rating_icon2'].'"></i></div></span>';
+  } 
+  else if (($author_posts > $rank_rating3) && ($author_posts <= $rank_rating4)) {
+    echo '<span class="'.$rcl_options['afrcl_rank_rating_enable'].'"><br /><div class="status-author-rating">'.$rcl_options['rank3_rating_forum'].'&nbsp;<i class="fa '.$rcl_options['rank_rating_icon3'].'"></i></div></span>';
+  } 
+  else if (($author_posts > $rank_rating4) && ($author_posts <= $rank_rating5)) {
+    echo '<span class="'.$rcl_options['afrcl_rank_rating_enable'].'"><br /><div class="status-author-rating">'.$rcl_options['rank4_rating_forum'].'&nbsp;<i class="fa '.$rcl_options['rank_rating_icon4'].'"></i></div></span>';
+  }
+  else if (($author_posts > $rank_rating5) && ($author_posts >= $rank_rating6)) {
+    echo '<span class="'.$rcl_options['afrcl_rank_rating_enable'].'"><br /><div class="status-author-rating">'.$rcl_options['rank6_rating_forum'].'&nbsp;<i class="fa '.$rcl_options['rank_rating_icon6'].'"></i></div></span>';
+  }
+}
+/* Модератор, администратор, остальные участники форума, зависит от званий на сайте, прогресс бар */
 add_action('asgarosforum_after_post_author', 'my_asgarosforum_after_post_administration', 10, 2);
 function getUserRoles($id) { 
     $user = new WP_User((int)$id); 
@@ -172,5 +194,13 @@ add_action('asgarosforum_after_post_message', 'my_function_signature', 10, 1);
 function my_function_signature($author_id) {
 global  $rcl_options;
 echo '<div class="'.$rcl_options['afrcl_signature_enable'].'">'.get_user_meta($author_id,$rcl_options['signature'],1).'</div>';
+	
+}
+/* подпись админа... */
+add_action('asgarosforum_after_post_message', 'my_function_signature_admin', 10, 1);
+function my_function_signature_admin($author_id) {
+global  $rcl_options;
+if($author_id=='1'){
+echo '<div class="'.$rcl_options['afrcl_signature_enable'].'"><img src="http://test.yworld.ru/wp-content/uploads/2017/02/31772.jpg" alt="юзер бар"></div>';}
 	
 }
