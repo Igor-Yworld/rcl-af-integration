@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Asgaros Forum to WP-Recall\n"
-"POT-Creation-Date: 2017-02-08 14:01+0300\n"
-"PO-Revision-Date: 2017-02-08 14:02+0300\n"
+"POT-Creation-Date: 2017-02-08 19:15+0300\n"
+"PO-Revision-Date: 2017-02-08 19:15+0300\n"
 "Last-Translator: Игорь <promo@yworld.ru>\n"
 "Language-Team: Yworld <yworld@yandex.ru>\n"
 "Language: ru_RU\n"
@@ -309,9 +309,6 @@ msgstr "Не заполняйте поля если не используете 
 #: rcl-asgaros/settings.php:160 rcl-asgaros/settings.php:163
 #: rcl-asgaros/settings.php:166 rcl-asgaros/settings.php:169
 #: rcl-asgaros/settings.php:172 rcl-asgaros/settings.php:175
-#: rcl-asgaros/settings.php:195 rcl-asgaros/settings.php:199
-#: rcl-asgaros/settings.php:203 rcl-asgaros/settings.php:207
-#: rcl-asgaros/settings.php:211 rcl-asgaros/settings.php:215
 msgid "Number of posts"
 msgstr "Количество сообщений"
 
@@ -374,6 +371,12 @@ msgstr "Пример: 1000"
 #: rcl-asgaros/settings.php:178
 msgid "The rank of by rating"
 msgstr "Звание от количества рейтинга"
+
+#: rcl-asgaros/settings.php:195 rcl-asgaros/settings.php:199
+#: rcl-asgaros/settings.php:203 rcl-asgaros/settings.php:207
+#: rcl-asgaros/settings.php:211 rcl-asgaros/settings.php:215
+msgid "Number of rating"
+msgstr "Количество рейтинга"
 
 #: rcl-asgaros/settings.php:219 rcl-asgaros/settings.php:222
 msgid "Information block"
