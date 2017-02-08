@@ -192,27 +192,27 @@ $opt->child(
                     ),
 				array(	
                 $opt->option('text',array('name'=>'rank1_rating_forum','label'=>__('The first rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: Contributor','rcl-asgaros'))),
-                $opt->option('number',array('name'=>'author_rating_1','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 10','rcl-asgaros'))),
+                $opt->option('number',array('name'=>'author_rating_1','label'=>__('Number of rating','rcl-asgaros'),'notice'=>__('Example: 10','rcl-asgaros'))),
 				$opt->option('text',array('name'=>'rank_rating_icon1','label'=>__('Add icon Font Awesome','rcl-asgaros'),'help'=>__('Add icon http://fontawesome.ru/all-icons/, insert in such a form: fa-bullhorn ','rcl-asgaros'),'notice'=>__('Example: fa-bullhorn','rcl-asgaros'))),
             
                 $opt->option('text',array('name'=>'rank2_rating_forum','label'=>__('Second rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: Activist','rcl-asgaros'))),
-                $opt->option('number',array('name'=>'author_rating_2','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 50','rcl-asgaros'))),
+                $opt->option('number',array('name'=>'author_rating_2','label'=>__('Number of rating','rcl-asgaros'),'notice'=>__('Example: 50','rcl-asgaros'))),
 				$opt->option('text',array('name'=>'rank_rating_icon2','label'=>__('Add icon Font Awesome','rcl-asgaros'),'help'=>__('Add icon http://fontawesome.ru/all-icons/, insert in such a form: fa-bullhorn ','rcl-asgaros'),'notice'=>__('Example: fa-bullhorn','rcl-asgaros'))),
                                 
                 $opt->option('text',array('name'=>'rank3_rating_forum','label'=>__('A third rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: lodger','rcl-asgaros'))),
-                $opt->option('number',array('name'=>'author_rating_3','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 100','rcl-asgaros'))),
+                $opt->option('number',array('name'=>'author_rating_3','label'=>__('Number of rating','rcl-asgaros'),'notice'=>__('Example: 100','rcl-asgaros'))),
                 $opt->option('text',array('name'=>'rank_rating_icon3','label'=>__('Add icon Font Awesome','rcl-asgaros'),'help'=>__('Add icon http://fontawesome.ru/all-icons/, insert in such a form: fa-bullhorn ','rcl-asgaros'),'notice'=>__('Example: fa-bullhorn','rcl-asgaros'))),                
                 
                 $opt->option('text',array('name'=>'rank4_rating_forum','label'=>__('The fourth rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: Frequenter','rcl-asgaros'))),
-                $opt->option('number',array('name'=>'author_rating_4','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 500','rcl-asgaros'))),
+                $opt->option('number',array('name'=>'author_rating_4','label'=>__('Number of rating','rcl-asgaros'),'notice'=>__('Example: 500','rcl-asgaros'))),
 				$opt->option('text',array('name'=>'rank_rating_icon4','label'=>__('Add icon Font Awesome','rcl-asgaros'),'help'=>__('Add icon http://fontawesome.ru/all-icons/, insert in such a form: fa-bullhorn ','rcl-asgaros'),'notice'=>__('Example: fa-bullhorn','rcl-asgaros'))),
                                 
                 $opt->option('text',array('name'=>'rank5_rating_forum','label'=>__('The fifth rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: The local','rcl-asgaros'))),
-                $opt->option('number',array('name'=>'author_rating_5','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 800','rcl-asgaros'))),
+                $opt->option('number',array('name'=>'author_rating_5','label'=>__('Number of rating','rcl-asgaros'),'notice'=>__('Example: 800','rcl-asgaros'))),
 				$opt->option('text',array('name'=>'rank_rating_icon5','label'=>__('Add icon Font Awesome','rcl-asgaros'),'help'=>__('Add icon http://fontawesome.ru/all-icons/, insert in such a form: fa-bullhorn ','rcl-asgaros'),'notice'=>__('Example: fa-bullhorn','rcl-asgaros'))),
                                 
                 $opt->option('text',array('name'=>'rank6_rating_forum','label'=>__('The sixth rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: VIP','rcl-asgaros'))),
-                $opt->option('number',array('name'=>'author_rating_6','label'=>__('Number of posts','rcl-asgaros'),'notice'=>__('Example: 1000','rcl-asgaros'))),
+                $opt->option('number',array('name'=>'author_rating_6','label'=>__('Number of rating','rcl-asgaros'),'notice'=>__('Example: 1000','rcl-asgaros'))),
 				$opt->option('text',array('name'=>'rank_rating_icon6','label'=>__('Add icon Font Awesome','rcl-asgaros'),'help'=>__('Add icon http://fontawesome.ru/all-icons/, insert in such a form: fa-bullhorn ','rcl-asgaros'),'notice'=>__('Example: fa-bullhorn','rcl-asgaros'))),
                   )
                 ),
