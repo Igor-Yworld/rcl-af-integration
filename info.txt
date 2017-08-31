@@ -1,6 +1,6 @@
 Name: Asgaros Forum + WP-Recall;
-Version: 2.0.7;
-Support Core: 15.0.0;
+Version: 2.1.0;
+Support Core: 16.0.0;
 Description: Значки и ссылки в личный кабинет WP-Recall, рейтинг поста и общий, местоположение(дополнение к WP-Recall-Сountry and city in profile), подпись на форуме, вывод соц. кнопок от дополнения Social Recall. Перед обновлением обязательно прочитайте о внесенных изменениях на странице поддержки плагина!;
 Author: Игорь Гребенкин;
 Author URI: https://codeseller.ru/author/garry/;
