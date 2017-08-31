@@ -231,7 +231,7 @@ $opt->child(
                 $opt->child(
                 array(
                     'name'=>'afrcl_rank_rating_enable',
-                    'value'=>'icon-status-indent1'//значение опции родителя
+                    'value'=>'icon-status-indent1'
                     ),
 				array(	
                 $opt->option('text',array('name'=>'rank1_rating_forum','label'=>__('The first rank','rcl-asgaros'),'help'=>__('Do not fill the field if you do not use the rank.','rcl-asgaros'),'notice'=>__('Example: Contributor','rcl-asgaros'))),
@@ -328,7 +328,7 @@ $opt->child(
 $opt->child(
             array(
                     'name'=>'afrcl_field_name_enable',
-                    'value'=>'afrcl-field'//значение опции родителя
+                    'value'=>'afrcl-field'
                     ),
                     array(
 					$opt->option('text',array('name'=>'afrcl_field_name_1','label'=>__('Name','rcl-asgaros'),'help'=>__('Enter the the field name. Not necessary.','rcl-asgaros'),'notice'=>__('Example: android','rcl-asgaros'))),
