@@ -29,7 +29,7 @@ function my_function_rating($author_id, $author_posts) {
 	echo '<div class="rating-post rating-header">'.rcl_get_html_post_rating($object_id,'forum-page',$author_id).'</div>';
 	
 }
-/* Общий рейтинг */
+/* Общий рейтинг на форуме */
 add_action('asgarosforum_after_post_author', 'my_function_asgaros_recall_rating', 20, 1);
 function my_function_asgaros_recall_rating($author_id) {
 	$user_info = get_userdata($author_id);
