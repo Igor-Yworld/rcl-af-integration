@@ -64,6 +64,7 @@ global  $rcl_options;
 add_action('asgarosforum_after_post_author', 'asgarosforum_after_author_rating', 10, 5);
 function asgarosforum_after_author_rating($author_id, $author_posts) {
 global  $rcl_options;
+if(rcl_exist_addon('rating-system')){
     $author_posts = rcl_get_user_rating($author_id);
 	$rank_rating1 = $rcl_options['author_rating_1']; $rank_rating2 = $rcl_options['author_rating_2']; $rank_rating3 = $rcl_options['author_rating_3']; $rank_rating4 = $rcl_options['author_rating_4']; $rank_rating5 = $rcl_options['author_rating_5']; $rank_rating6 = $rcl_options['author_rating_6'];
   if (($author_posts > $rank_rating1) && ($author_posts <= $rank_rating2)){
@@ -81,6 +82,7 @@ global  $rcl_options;
   else if (($author_posts > $rank_rating5) && ($author_posts >= $rank_rating6)) {
     echo '<span class="'.$rcl_options['afrcl_rank_rating_enable'].'"><div class="status-author-rating">'.$rcl_options['rank6_rating_forum'].'&nbsp;<i class="fa '.$rcl_options['rank_rating_icon6'].'"></i></div></span>';
   }
+ }
 }
 /* Модератор, администратор, остальные участники форума, зависит от званий на сайте, прогресс бар */
 add_action('asgarosforum_after_post_author', 'my_asgarosforum_after_post_administration', 10, 2);
@@ -178,7 +180,7 @@ global  $rcl_options;
 echo '<div class="'.$rcl_options['afrcl_field_name_enable'].'">'.get_user_meta($author_id,$rcl_options['afrcl_field_1'],1).'</div></details></div>';
 	
 }
-/* объявление пользователя */
+/* объявление пользователя на форуме */
 add_action('asgarosforum_after_post_author', 'my_function_announcement', 50, 1);
 function my_function_announcement($author_id) {
 global  $rcl_options;
